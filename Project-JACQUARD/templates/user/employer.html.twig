@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('asset/css/IndexUser-styles.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="bloc-user-index">
+        <h1 class="user-index">User</h1>
+    </div>
+    <ul>
+        <li><a href="{{ path('app_voiture_index') }}">Gestion Voiture</a></li>
+        <li><a href="{{ path('app_commentaire_index') }}">Gestion Commentaire</a></li>
+        <li><a href="{{ path('app_formulaireContacte_index') }}">Gestion Formulaire de Contacte</a></li>
+    </ul>
+{% endblock %}

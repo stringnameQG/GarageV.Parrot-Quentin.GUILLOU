@@ -1,0 +1,36 @@
+{% extends 'sitebase.html.twig' %}
+
+{% block title %}Hello GaleriePhotoController!{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('asset/css/galerie-photo-styles.css') }}">
+{% endblock %}
+
+{% block main %}
+<div class="voitures-description-photo">
+    <div class="voitures-arrow">
+        <img class="voitures-arrow-left" src="{{ asset('asset/Dossier-image/Body-image/arrow-left-circle-fill.svg') }}">
+        <img class="voitures-arrow-right" src="{{ asset('asset/Dossier-image/Body-image/arrow-left-circle-fill.svg') }}">
+    </div>
+    <div class="image-actuelle-compteur">
+        <span class="image-actuelle-affichage"><span class="image-actuelle">1</span>/<span class="image-nombre-total">2</span></span>
+    </div>
+</div>
+<div class="voiture">
+    <span class="voiture-titre">titre de la voiture</span>
+    <div class="voiture-infos">
+        <span>Prix: </span>
+        <span class="prix">20 000</span>
+        <span> €</span>
+    </div>
+    <div class="voiture-infos">
+        <span>killometre: </span>
+        <span class="killometre">100 000</span>
+        <span>km</span>
+    </div>
+    <div class="voiture-infos-circulation">
+        <span>mise en circulation: </span>
+        <span class="annee">2004</span>
+    </div>
+</div>
+{% endblock %}

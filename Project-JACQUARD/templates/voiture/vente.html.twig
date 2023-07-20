@@ -1,0 +1,121 @@
+{% extends 'corps.html.twig' %}
+
+{% block title %}Hello VehiculeVenteController!{% endblock %}
+
+{% block css %}
+     <link rel="stylesheet" href="{{ asset('asset/css/Voiture-styles.css') }}">
+{% endblock %}
+
+{% block autres %}
+<div class="filtres-de-sélection">
+    <form class="filtres" action="" method="get">
+        <div class="filtres-quitter">
+            <h3>Tous les filtres</h3>
+            <img class="button-filtres-quitter" src="{{ asset('asset/Dossier-Image/Body-image/x-circle.svg') }}">
+        </div>
+        <div>
+            <hr>
+        </div>
+        <div class="affichage-prix">
+            <div>
+                <h3 class="filtres-titres">Prix</h3>
+            </div>
+            <div class="filtres-horizontale">
+                <div>
+                    <label class="filtres-label" for="prix-minimum">Minimum</label>
+                    <div class="filtres-horizontale-input">
+                        <input type="number" class="filtres-input" name="prix-minimum" id="prix-minimum" type="text">
+                        <img class="euro-icon" src="{{ asset('asset/Dossier-Image/Body-image/euro.svg') }}">
+                    </div>
+                </div>
+                <div>
+                    <label class="filtres-label" for="prix-maximum">Maximum</label>
+                    <div class="filtres-horizontale-input">
+                        <input type="number" class="filtres-input" name="prix-maximum" id="prix-maximum" type="text">
+                        <img class="euro-icon" src="{{ asset('asset/Dossier-Image/Body-image/euro.svg') }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <hr>
+        </div>
+        <div class="affichage-killometre">
+            <div>
+                <h3 class="filtres-titres">Killométrage</h3>
+            </div>
+            <div class="filtres-horizontale">
+                <div>
+                    <label class="filtres-label" for="killometrage-minimum">Minimum</label>
+                    <input type="number" class="filtres-input" name="killometrage-minimum" id="killometrage-minimum" type="text">
+                </div>
+                <div>
+                    <label class="filtres-label" for="killometrage-maximum">Maximum</label>
+                    <input type="number" class="filtres-input" name="killometrage-maximum" id="killometrage-maximum" type="text">
+                </div>
+            </div>
+        </div>
+        <div>
+            <hr>
+        </div>
+        <div class="affichage-annee">
+            <div>
+                <h3 class="filtres-titres">Année de mise en circulation</h3>
+            </div>
+            <div class="filtres-horizontale">
+                <div>
+                    <label class="filtres-label" for="annee-minimum">Minimum</label>
+                    <input type="number" class="filtres-input" name="annee-minimum" id="annee-minimum" type="text">
+                </div>
+                <div>
+                    <label class="filtres-label" for="annee-maximum">Maximum</label>
+                    <input type="number" class="filtres-input" name="annee-maximum" id="annee-maximum" type="text">
+                </div>
+            </div>
+        </div>
+        <div>
+            <hr>
+        </div>
+    </form>
+    <button class="button-recherche" type="submit">Rechercher</button>
+</div>
+{% endblock %}
+
+{% block main %}
+
+    <button class="filtres-button">Filtres de sélection</button>
+    <div class="vehicule-affichage">  
+    {% for voiture in voitures %}
+        <div class="nos-vehicule">
+            <div class="nos-vehicule-cars">
+                <img class="voiture-image" src="voiture">
+                <span class="voiture-titre">{{ voiture.name }}</span>
+                <div class="voiture">
+                    <div class="voiture-infos">
+                        <span>Prix: </span>
+                        <span class="prix">{{ voiture.prix }}</span><span>€</span>
+                    </div>
+                    <div class="voiture-infos">
+                        <span>killometre: </span>
+                        <span class="killometre">{{ voiture.kilometrage }}<span>km</span></span>
+                    </div>
+                    <div class="voiture-infos">
+                        <span>mise en circulation: </span>
+                        <span class="annee">{{ voiture.miseencirculation }}</span>
+                    </div>
+                    <div class="question">
+                        <p class="question-text">des question ? <span class="formulaire-button">formulaire</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% else %}
+    <span>No records</span>
+    {% endfor %}
+    </div>   
+{% endblock %}
+
+{% block script %}
+    <script src="{{ asset('asset/js/Test.js') }}"></script>
+    <script src="{{ asset('asset/js/Filtre-Affichage.js') }}"></script>
+{% endblock %}

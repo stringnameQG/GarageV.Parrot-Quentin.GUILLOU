@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}GarageV.Parrot!{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('asset/css/General-styles.css') }}">
+        {% block css %}
+            
+        {% endblock %}
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <meta>
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <header>
+    {% block header %}
+        <img class="header-icon-register" src="{{ asset('asset/Dossier-Image/Header-image/person-fill.svg') }}">
+        <img class="logo" src="{{ asset('asset/Dossier-Image/Header-image/Logo.png') }}">
+        <img class="header-icon-nav" src="{{ asset('asset/Dossier-Image/Header-image/nav.svg') }}">
+    {% endblock %}
+    </header>
+    <nav>
+    {% block nav %}
+        <img class="button-quitte-nav" src="{{ asset('asset/Dossier-Image/Body-image/x-circle.svg') }}">
+        <ul class="formulaire">
+            <li><a class="nav-link" href="{{ path('Accueil') }}">Accueil</a></li>
+            <li><a class="nav-link" href="{{ path('Voiture') }}">Voiture</a></li>
+            <li><a class="nav-link" href="{{ path('Entretien') }}">Entretien</a></li>
+            <li><a class="nav-link" href="{{ path('Carrosserie') }}">Carrosserie</a></li>
+            <li><a class="nav-link" href="{{ path('Réparation') }}">Réparation</a></li>
+            {% if is_granted("ROLE_ADMIN") %}
+            <li><a class="nav-link" href="{{ path('app_user_index') }}">User</a></li> 
+            {% endif %}
+
+
+            <li><a class="nav-link" href="{{ path('app_login') }}">Login</a></li>
+            <li>
+                <a href="{{ path('app_logout') }}" onclick="return confirm('Etes vous sur de vouloir vous déconnecter ?');">
+                    Logout
+                </a>
+            </li>
+        </ul>
+    {% endblock %}
+    </nav>
+    <aside>
+    {% block aside %}
+        <form class="connexion" action="" method="get">
+            <img class="button-quitte-aside" src="{{ asset('asset/Dossier-Image/Body-image/x-circle.svg') }}">
+            <div class="email">
+                <div class="email-label">
+                    <label for="email">e-mail</label>
+                    <p class="champ-requis">champs requis</p>
+                </div>
+                <input name="email" id="email" type="email" required>
+            </div>
+            <div class="password">
+                <div class="password-label">
+                    <label for="password">Mot de passe</label>
+                    <p class="champ-requis">champs requis</p>
+                </div>
+                <input name="password" id="password" type="password" required>
+            </div>
+            <button class="submit" type="submit">ENVOYER</button>
+        </form>
+    {% endblock %}
+    </aside>
+    {% block formulaire %}
+    <div class="formulaire-de-contacte">
+        <form class="contacte" action="" method="get">
+            <img class="button-quitte-formulaire-contacte" src="{{ asset('asset/Dossier-Image/Body-image/x-circle.svg') }}">
+            <div class="sujet">
+                <label for="sujet">Sujet</label>
+                <input name="sujet" id="sujet" type="text" required>
+            </div>
+            <div class="nom">
+                <label for="nom">Nom</label>
+                <input name="nom" id="nom" type="text" required>
+            </div>
+            <div class="prenom">
+                <label for="prenom">Prénom</label>
+                <input name="prenom" id="prenom" type="text" required>
+            </div>
+            <div class="email">
+                <label for="email">e-mail</label>
+                <input name="email" id="email" type="email" required>
+            </div>
+            <div class="phone">
+                <label for="phone">Téléphone</label>
+                <input name="phone" id="phone" type="tel" required>
+            </div>
+            <div class="message">
+                <label for="message">Message</label>
+                <textarea id="message" name="story" required></textarea>
+            </div>
+            <button class="submit" type="submit">ENVOYER</button>
+            <span class="champ-requis">tout les champs son requis</span>
+        </form>
+    </div>
+    {% endblock %}
+
+    {% block autres %}
+    
+    {% endblock %}
+    <main>
+        {% block main %}
+            
+        {% endblock %}
+    </main>
+    <footer>
+        <div class="nous-joindre">
+            <h2>NOUS JOINDRE</h2>
+            <p>Téléphone:  
+                <a href="tel:+33745231549">07 45 23 15 49</a>
+            </p>
+            <p>Ou via le <span class="formulaire-contacte-button">formulaire</span></p>
+        </div>
+        <div class="nos-horaires">
+            <h2>nos horaires</h2>
+            <ul>
+            {#
+            {% for horaire in horaires %}
+                <li>lun. {{ horaire.lundi }}</li>
+                <li>mar. {{ horaire.mardi }}</li>
+                <li>dim. {{ horaire.mercredi }}</li>
+                <li>mer. {{ horaire.jeudi }}</li>
+                <li>jeu. {{ horaire.vendredi }}</li>
+                <li>ven. {{ horaire.samedi }}</li>
+                <li>sam. {{ horaire.dimanche }}</li>
+            {% else %}
+                <span>Erreur chargement horaire</span>
+                <span>Ces horaires son les horaires par défaut</span>
+                <li>lun. 8:45-12:00~14:00-18:00</li>
+                <li>mar. 8:45-12:00~14:00-18:00</li>
+                <li>mer. 8:45-12:00~14:00-18:00</li>
+                <li>jeu. 8:45-12:00~14:00-18:00</li>
+                <li>ven. 8:45-12:00~14:00-18:00</li>
+                <li>sam. 8:45-12:00</li>
+                <li>dim. Fermé</li>
+            {% endfor %}
+            #}
+                <li>lun. 8:45-12:00~14:00-18:00</li>
+                <li>mar. 8:45-12:00~14:00-18:00</li>
+                <li>mer. 8:45-12:00~14:00-18:00</li>
+                <li>jeu. 8:45-12:00~14:00-18:00</li>
+                <li>ven. 8:45-12:00~14:00-18:00</li>
+                <li>sam. 8:45-12:00</li>
+                <li>dim. Fermé</li>
+            </ul>
+        </div>
+        <div class="nos-medias">
+            <h2>nos médias</h2>
+            <div class="footer-icon">
+                <a  href="https://fr-fr.facebook.com/" target="_blank">
+                    <img src="{{ asset('asset/Dossier-Image/Footer-image/facebook.svg') }}">
+                </a>
+                <a  href="https://twitter.com/" target="_blank">
+                    <img src="{{ asset('asset/Dossier-Image/Footer-image/twitter.svg') }}">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="{{ asset('asset/Dossier-Image/Footer-image/instagram.svg') }}">
+                </a>
+            </div>
+        </div>
+    </footer>
+    </body>
+    <script src="{{ asset('asset/js/General.js') }}"></script>
+    {% block script %}
+
+    {% endblock %}
+</html>

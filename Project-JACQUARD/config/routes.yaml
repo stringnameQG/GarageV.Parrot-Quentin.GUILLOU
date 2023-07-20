@@ -1,0 +1,12 @@
+controllers:
+    resource: ../src/Controller/
+    type: annotation
+    prefix: /garragev_parrot
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation
+
+blog_post:
+    path:       /garage/v/parrot
+    controller: App\Controller\BlogController::show

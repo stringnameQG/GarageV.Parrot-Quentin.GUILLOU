@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion commentaire{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('asset/css/Truc-styles.css') }}">
+{% endblock %}
+
+{% block body %}
+<h1>Modifier un commentaire</h1>
+<div>
+    {% include "commentaire/_form.html.twig" with {'button_label': 'Modifier'} %}
+</div>
+
+
+{% endblock %}

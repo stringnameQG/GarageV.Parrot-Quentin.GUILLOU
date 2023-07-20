@@ -1,0 +1,36 @@
+<div class="formulaire-de-contacte">
+    <form class="contacte" name="formulaire_contacte" method="post">
+        <img class="button-quitte-formulaire-contacte" src="{{ asset('asset/Dossier-Image/Body-image/x-circle.svg') }}">
+    
+        <div class="sujet">
+            <label for="formulaire_contacte_sujet" >Sujet</label>
+            <input type="text" id="formulaire_contacte_sujet" name="formulaire_contacte[sujet]" required="required" maxlength="255" value="fssfdg">
+        </div>
+        <div class="nom">
+            <label for="formulaire_contacte_name" >Nom</label>
+            <input type="text" id="formulaire_contacte_name" name="formulaire_contacte[name]" required="required" maxlength="255" value="sfdgs">
+        </div>
+    
+        <div class="prenom">
+            <label for="formulaire_contacte_first_name" >Prénom</label>
+            <input type="text" id="formulaire_contacte_first_name" name="formulaire_contacte[first_name]" required="required" maxlength="255" value="sdfsfg">
+        </div>
+        <div class="email">
+            <label for="formulaire_contacte_e_mail" >e-mail</label>
+            <input type="text" id="formulaire_contacte_e_mail" name="formulaire_contacte[e_mail]" required="required" maxlength="255" value="11">
+        </div>
+        <div class="phone">
+            <label for="formulaire_contacte_numero" >Téléphone</label>
+            <input type="number" id="formulaire_contacte_numero" name="formulaire_contacte[numero]" required="required" value="11">
+        </div>
+        
+        <div class="message">
+            <label for="formulaire_contacte_message" >Message</label>
+            <input type="text" id="formulaire_contacte_message" name="formulaire_contacte[message]" required="required" maxlength="255" value="11">
+        </div>
+    
+        <button type="submit">ENVOYER</button>
+        <text type="hidden" id="formulaire_contacte__token" name="formulaire_contacte[_token]" value="78c9f4f521b031d4232ce807.dySMKAWrcGUvYX7NjzasUo-2iVspcWgzmpALmnN6hQ4.JUXaUlCTMzpbJ0yKylnHDdnP5GN_QBhB6v5g7gYMwD8VSf9Ya_8GJkQOPw">
+        <span class="champ-requis">tout les champs son requis</span>
+    </form>
+</div>

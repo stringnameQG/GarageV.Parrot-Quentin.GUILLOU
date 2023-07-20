@@ -1,0 +1,6 @@
+{{ form_start(commentaireform)}}
+    {{ form_row(commentaireform.name) }}
+    {{ form_row(commentaireform.commentaire) }}
+    {{ form_row(commentaireform.note) }}
+    <button type="submit">{{ button_label|default('Ajouter') }}</button>
+{{ form_end(commentaireform)}}

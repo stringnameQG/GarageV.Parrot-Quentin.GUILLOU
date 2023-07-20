@@ -1,0 +1,5 @@
+{{ form_start(serviceform)}}
+    {{ form_row(serviceform.titre) }}
+    {{ form_row(serviceform.contenue) }}
+    <button type="submit">{{ button_label|default('Ajouter') }}</button>
+{{ form_end(serviceform)}}

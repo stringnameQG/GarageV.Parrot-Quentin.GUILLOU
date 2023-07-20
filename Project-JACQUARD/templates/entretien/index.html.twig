@@ -1,0 +1,60 @@
+{% extends 'corps.html.twig' %}
+
+{% block title %}Hello EntretienController!{% endblock %}
+
+{% block css %}
+     <link rel="stylesheet" href="{{ asset('asset/css/Entretien-styles.css') }}">
+{% endblock %}
+
+{% block main %}
+
+<div class="entretien-block">
+    <div class="entretien-description">
+        <span class="entretien-titre">Entretien</span>
+        <p class="entretien-titre-description">
+        Cher Garage V. Parrot nous assurons tout les grandes
+         étapes de l’entretien de votre véhicule .
+        </p>
+    </div>
+    <ol class="entretien-liste">
+        <li class="entretien-liste-element">Changement d'huile et de filtre à huile : C'est 
+        une des tâches d'entretien les plus courantes et 
+        importantes pour maintenir la santé de votre moteur. 
+        Il est recommandé de changer l'huile et le filtre à 
+        huile tous les 5 000 à 10 000 kilomètres ou tous les 
+        six mois.
+        </li> 
+        <li class="entretien-liste-element">Remplacement des filtres à air : Les filtres à air 
+        empêchent les impuretés de pénétrer dans le moteur et 
+        doivent être remplacés tous les 20 000 à 30 000 kilomètres.
+        </li> 
+        <li class="entretien-liste-element">Remplacement des bougies d'allumage : Les bougies 
+        d'allumage sont responsables de l'allumage du carburant 
+        dans le moteur et doivent être remplacées tous les 50 000 à 
+        100 000 kilomètres.
+        </li> 
+        <li class="entretien-liste-element">Vérification du système de refroidissement : Le système 
+        de refroidissement maintient le moteur à une température de 
+        fonctionnement optimale. Il faut vérifier régulièrement le 
+        niveau de liquide de refroidissement et le remplacer tous 
+        les deux ans.
+        </li> 
+        <li class="entretien-liste-element">Inspection des freins: Les freins sont essentiels pour 
+        la sécurité de votre véhicule. Il est recommandé de faire 
+        inspecter les freins tous les 20 000 kilomètres environ.
+        </li> 
+        <li class="entretien-liste-element">Vérification des pneus : Les pneus sont l'unique point 
+        de contact entre votre voiture et la route. Il faut vérifier 
+        régulièrement la pression des pneus, l'usure des pneus et 
+        de faire une rotation tous les 10 000 à 15 000 kilomètres.
+        </li> 
+        <li class="entretien-liste-element">Vérification des niveaux de liquide : Il est important 
+        de vérifier régulièrement les niveaux de liquide de frein, 
+        de liquide de transmission, de liquide de direction assistée 
+        et de liquide de lave-glace pour s'assurer que votre voiture 
+        fonctionne correctement.
+        </li>
+    </ol>
+</div>
+
+{% endblock %}

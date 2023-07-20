@@ -1,0 +1,38 @@
+{% extends 'corps.html.twig' %}
+
+{% block title %}Hello ReparationMecaniqueController!{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('asset/css/reparation-mecanique-styles.css') }}">
+{% endblock %}
+
+{% block main %}
+
+<div class="block-mecanique">
+    <span class="mécanique-titre">Réparation mécanique</span>
+    <p class="mécanique-text">
+        Nous effectuons aussi le dignostique en cas de probléme
+         sur votre véhicule afin d’identifier au mieux qu’elle 
+         pièce nécessite un remplacement. Toutes nos réparations 
+         sont faites avec les pièces d’origine dans notre atelier. 
+    </p>
+    <p class="mécanique-text">
+         Nous disposon de l’habilitations pour réparrer les véhicule 
+         électrique et hybride. 
+    </p>
+    <p class="mécanique-text">
+         Pour un véhicule et une conduite 
+         en toute sécuriter nous vous conseillerons les systéme de 
+         freinage les plus adaptés. 
+    </p>
+    <p class="mécanique-text">
+         Avant de vous rendre votre 
+         véhicule nous le netoyons intégralement.
+    </p>
+</div>
+<div class="block-image">
+    <img class="image" src="{{ asset('asset/Dossier-Image/Réparation-mécanique/Réparation-pneu.jpg') }}">
+    <img class="image" src="{{ asset('asset/Dossier-Image/Réparation-mécanique/Réparation-1.jpg') }}">
+</div>
+
+{% endblock %}

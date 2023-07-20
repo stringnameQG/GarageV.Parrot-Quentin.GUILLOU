@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion service{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('asset/css/Truc-styles.css') }}">
+{% endblock %}
+
+{% block body %}
+<h1>Modifier un service</h1>
+<div>
+    {% include "service/_form.html.twig" with {'button_label': 'Modifier'} %}
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{{ form_start(voitureform)}}
+    {{ form_row(voitureform.name) }}
+    {{ form_row(voitureform.prix) }}
+    {{ form_row(voitureform.kilometrage) }}
+    {{ form_row(voitureform.mise_en_circulation) }}
+    {{ form_row(voitureform.boite_vitesse) }}
+    {{ form_row(voitureform.carburant) }}
+    {{ form_row(voitureform.couleur) }}
+    {{ form_row(voitureform.marque) }}
+    {{ form_row(voitureform.modele) }}
+    {{ form_row(voitureform.nombre_porte) }}
+    {{ form_row(voitureform.puissance_din) }}
+    {{ form_row(voitureform.puissance_fiscale) }}
+    {{ form_row(voitureform.autre_info) }}
+    <button type="submit">{{ button_label|default('Ajouter') }}</button>
+{{ form_end(voitureform)}}

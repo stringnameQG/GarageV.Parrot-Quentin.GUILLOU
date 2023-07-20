@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion Voiture{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('asset/css/Truc-styles.css') }}">
+{% endblock %}
+
+{% block body %}
+<h1>Modifier une voiture</h1>
+<div>
+    {% include "voiture/_form.html.twig" with {'button_label': 'Modifier'} %}
+</div>
+
+
+{% endblock %}

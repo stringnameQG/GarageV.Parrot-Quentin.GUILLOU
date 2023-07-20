@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}GarageV.Parrot!{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('asset/css/General-styles.css') }}">
+        {% block css %}
+            
+        {% endblock %}
+        
+        <meta>
+        
+    </head>
+    <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <header>
+        {% include "CorpsDocument/header.html.twig" %}
+    </header>
+    <nav>
+        {% include "CorpsDocument/nav.html.twig" %}
+    </nav>
+    <aside>
+
+    {% include "CorpsDocument/aside.html.twig" %}
+    </aside>
+
+
+    <div class="formulaire-de-contacte">
+        
+        <div class="formulaire-contenue">
+            <img class="button-quitte-formulaire-contacte" src="{{ asset('asset/Dossier-Image/Body-image/x-circle.svg') }}">
+            {{ include('formulairecontacte/_form.html.twig') }} 
+        </div>
+    </div>
+
+    
+
+{#}    {% include "CorpsDocument/formulaire_de_contacte.html.twig" %}  #}
+    
+    {% block autres %}
+    
+    {% endblock %}
+    <main>
+        {% block main %}
+            
+        {% endblock %}
+    </main>
+    <footer>
+        {% include "CorpsDocument/footer.html.twig" %}
+    </footer>
+    </body>
+    <script src="{{ asset('asset/js/General.js') }}"></script>
+    {% block script %}
+
+    {% endblock %}
+</html>

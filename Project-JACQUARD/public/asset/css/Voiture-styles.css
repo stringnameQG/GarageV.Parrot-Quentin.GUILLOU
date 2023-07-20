@@ -1,0 +1,269 @@
+ .filtres-de-sélection {
+    background-color: #D9D9D9;
+    height: 100vh;
+    width: 320px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.filtres {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.filtres-quitter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.filtres-quitter:first-child {
+    justify-self: center;
+    font-size: 20px;
+}
+.button-filtres-quitter {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+}
+.affichage-prix {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.filtres-titres {
+    font-size: 18px;
+}
+.filtres-horizontale {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.filtres-label {
+    color: #555555;
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 2px;
+}
+.filtres-horizontale-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.filtres-input {
+    width: 126px;  
+}
+.euro-icon {
+    width: 18px;
+    height: 18px;
+}
+.button-recherche {
+    height: 30px;
+    width: 110px;
+    margin: 4px;
+    align-self: center;
+}
+main {
+    background-color: #EDEDE9;
+    min-height: 514px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 8px;
+}
+.filtres-button {
+    width: 60%;
+    max-width: 350px;
+    font-size: 16px;
+    align-self: center;
+    background-color: #E76F51;
+    border-radius: 15px;
+}
+.filtres {
+    text-align: center;
+    margin: 4px;
+}
+.vehicule-affichage {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.nos-vehicule {
+    background-color: #E9C46A;
+    width: 94vw;
+    padding: 2px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+.nos-vehicule > h1 {
+    width: 200px;
+    align-self: center;
+}
+.nos-vehicule-text {
+    width: calc(100% - 10px);
+    align-self: center;
+}
+.nos-vehicule-text > p {
+    width: calc(100% - 10px);
+    align-self: center;
+}
+.nos-vehicule-cars {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.voiture-titre {
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-left: 8px;
+}
+.voiture-image {
+    height: 50vw;
+    width: 90vw;
+    margin: 10px;
+    align-self: center;
+}
+.voiture {
+    padding-top: 4px; padding-bottom: 4px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.voiture-infos {
+    min-width: 200px;
+    width: 48%; 
+    padding: 2px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.voiture-infos > span {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.question {
+    width: 100%;
+    text-align: center;
+}
+.question-text {
+    margin: 4px;
+}
+.formulaire-button {
+    color: #7C0000;
+}
+.plus-button {
+    background-color: #E76F51;
+    width: 50%;
+    max-width: 300px;
+    align-self: center;
+    border-radius: 15px;
+}
+@media screen and (min-width: 800px) {
+    .filtres-titres {
+        font-size: 20px;
+    }
+    .voiture-infos {
+        width: 30%; 
+        padding: 4px;
+        margin: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .filtres-de-sélection {
+        width: 400px;
+    }
+    .filtres-horizontale {
+        margin-top: 10px;
+        gap: 16px;
+    }
+    .filtres-input {
+        width: 160px;  
+    }
+    main {
+        min-height: calc(100vh - (80px + 190px));
+        height: fit-content;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+    .vehicule-affichage {
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .nos-vehicule {
+        width: calc(100% / 3 + (-15px));
+        height: fit-content;
+        padding: 4px;
+        padding-top: 6px; padding-bottom: 6px;
+        justify-content: flex-start;
+        gap: 8px;
+        grid-row-start: 2;
+        grid-row-end: 5;
+        grid-column-start: 4;
+    }
+    .nos-vehicule-text {
+        background-color: #F4A261;
+        border: 6px;
+        border-radius: 15px;
+    }
+    .nos-vehicule-text > p {
+        height: min-content;
+        margin: 8px;
+    }
+    .nos-vehicule-cars {
+        background-color: #F4A261;
+        height: min-content;
+        width: calc(100% - 20px);
+        padding: 5px;
+        margin: 2px;
+        border-radius: 15px;
+        align-self: center;
+        justify-content: center;
+    }
+    .voiture-image {
+        height: calc(50vw / 3);
+        width: 30vw;
+        margin: 0px;
+        margin-top: 0px; margin-bottom: 4px;
+        align-self: center;
+    }
+    .voiture {
+        height: min-content;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .voiture-infos {
+        width: 48%; 
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+}

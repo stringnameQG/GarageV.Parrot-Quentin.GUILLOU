@@ -1,0 +1,11 @@
+{% for commentaire in commentaires %}
+        <div class="client">
+            <span class="client-name">{{ commentaire.name }}</span>
+            <p class="client-comment">{{ commentaire.commentaire }}</p>
+            <p class="client-note-affichage"><span class="client-note">{{ commentaire.note }}</span>/5</p>
+        </div>
+    {% else %}
+        <span>no records found</span>
+    {% endfor %} 
+
+    

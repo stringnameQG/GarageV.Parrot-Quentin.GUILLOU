@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administrateur{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('asset/css/IndexUser-styles.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="bloc-user-index">
+        <h1 class="user-index">Administrateur - Création de compte</h1>
+    </div>
+    <table class="table">
+        <thead class="table-titre">
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Roles</th>
+                <th>Password</th>
+                <th>Name</th>
+                <th>First_name</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+                <td class="test">{{ user.password }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.firstName }}</td>
+                <td>
+                    <div class="block-button">
+                        <div class="button-div">
+                            <a class="button-show" href="{{ path('app_user_show', {'id': user.id}) }}">show</a>
+                        </div>
+                        <div class="button-div">
+                            <a  class="button-edit" href="{{ path('app_user_edit', {'id': user.id}) }}">edit</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div>
+        <a class="create-new" href="{{ path('app_user_new') }}">Create new</a>
+    </div>
+    <ul>
+        <li><a href="{{ path('app_voiture_index') }}">Gestion Voiture</a></li>
+        <li><a href="{{ path('app_commentaire_index') }}">Gestion Commentaire</a></li>
+        <li><a href="{{ path('app_formulaireContacte_index') }}">Gestion Formulaire de Contacte</a></li>
+        <li><a href="{{ path('app_horaire_index') }}">Gestion Horaire</a></li>
+        <li><a href="{{ path('app_service_index') }}">Gestion Service</a></li>
+    </ul>
+{% endblock %}

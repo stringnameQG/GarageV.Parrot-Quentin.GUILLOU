@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}GarageV.Parrot!{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('asset/css/General-styles.css') }}">
+        {% block css %}
+            
+        {% endblock %}
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <meta>
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <header>
+        {% include "header.html.twig" %}
+    </header>
+    <nav>
+        {% include "nav.twig" %}
+    </nav>
+    <aside>
+        {% include "aside.twig" %}
+    </aside>
+    {% include "formulaire_de_contacte.twig" %}
+
+    {% block autres %}
+    
+    {% endblock %}
+    <main>
+        {% block main %}
+            
+        {% endblock %}
+    </main>
+    <footer>
+        {% include "footer.twig" %}
+    </footer>
+    </body>
+
+    <script src="{{ asset('asset/js/General.js') }}"></script>
+
+    
+    {% block script %}
+
+    {% endblock %}
+</html>

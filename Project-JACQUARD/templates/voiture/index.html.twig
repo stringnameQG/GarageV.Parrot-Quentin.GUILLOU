@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion Voiture{% endblock %}
+
+{% block body %}
+<h1>Gestion Voiture</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>name</th>
+                <th>Prix</th>
+                <th>kilometrage</th>
+                <th>Mise en circulation</th>
+                <th>Boite de vitesse</th>
+                <th>Carburant</th>
+                <th>Couleur</th>
+                <th>Marque</th>
+                <th>Modele</th>
+                <th>Nombre de porte</th>
+                <th>Puissance din</th>
+                <th>Puissance fiscal</th>
+                <th>Autre infos</th>
+            </tr>
+        </thead>
+        <tbody>
+{% for voiture in voitures %}
+            <tr>
+                <td>{{ voiture.id }}</td>
+                <td>{{ voiture.name }}</td>
+                <td>{{ voiture.prix }}</td>
+                <td>{{ voiture.kilometrage }}</td>
+                <td>{{ voiture.miseencirculation }}</td>
+                <td>{{ voiture.boitevitesse }}</td>
+                <td>{{ voiture.carburant }}</td>
+                <td>{{ voiture.couleur }}</td>
+                <td>{{ voiture.marque }}</td>
+                <td>{{ voiture.modele }}</td>
+                <td>{{ voiture.nombreporte }}</td>
+                <td>{{ voiture.puissancedin }}</td>
+                <td>{{ voiture.puissancefiscale }}</td>
+                <td>{{ voiture.autreinfo }}</td>
+                <td>
+                    <div>
+                        <a href="{{ path('app_voiture_edit', {'id': voiture.id}) }}">edit</a>
+                    </div>
+                    <div>
+                        {{ include('voiture/_delete_form.html.twig') }}
+                    </div>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div>
+        <a href="{{ path('app_voiture_new') }}">Create new</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'corps.html.twig' %}
+
+{% block title %}Hello ReparationCarroserieController!{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('asset/css/reparation-carroserie-styles.css') }}">
+{% endblock %}
+
+{% block main %}
+<div class="block-reparation">
+    <div class="reparation">
+        <h4 class="carrosserie-titre">Réparation de carrosserie</h4>
+        <p class="carrosserie-text">
+        Quelle soit rayé ou accidenté le Garage V. Parrot répare les éléments 
+        de carrosserie pour vos véhicules de toutes marques. aux seins de notre 
+        atelier nous assurons le ponçage, le redressage et le débosselage sans peinture. 
+        Profitez de notre expertise pour un grand nombre de services.
+        </p>
+    </div>
+    <img class="reparation-image" src="{{ asset('asset/Dossier-Image/Réparation-carrosserie/Carrosserie-coupe.jpg') }}">
+</div>
+<div class="block-peinture">
+    <div class="peinture">
+        <h4 class="peinture-titre">Peinture</h4>
+        <p class="peinture-text">
+        Notre atelier est équiper d’un laboratoire colorimérique. Ainsi nos péparation 
+        nous permetes d’obtenir une peinture identique à la peinture utiliser en usine 
+        pour vos véhicules.
+        </p>
+    </div>
+    <img class="peinture-image" src="{{ asset('asset/Dossier-Image/Réparation-carrosserie/Carrosserie-polissage.jpg') }}">
+</div>
+{% endblock %}

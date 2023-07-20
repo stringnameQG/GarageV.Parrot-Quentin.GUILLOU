@@ -1,0 +1,19 @@
+{% for horaire in horaires %}
+    <li>lun. {{ horaire.lundi }}</li>
+    <li>mar. {{ horaire.mardi }}</li>
+    <li>dim. {{ horaire.mercredi }}</li>
+    <li>mer. {{ horaire.jeudi }}</li>
+    <li>jeu. {{ horaire.vendredi }}</li>
+    <li>ven. {{ horaire.samedi }}</li>
+    <li>sam. {{ horaire.dimanche }}</li>
+{% else %}
+    <span>Erreur chargement horaire</span>
+    <span>Ces horaires son les horaires par défaut</span>
+    <li>lun. 8:45-12:00~14:00-18:00</li>
+    <li>mar. 8:45-12:00~14:00-18:00</li>
+    <li>mer. 8:45-12:00~14:00-18:00</li>
+    <li>jeu. 8:45-12:00~14:00-18:00</li>
+    <li>ven. 8:45-12:00~14:00-18:00</li>
+    <li>sam. 8:45-12:00</li>
+    <li>dim. Fermé</li>
+{% endfor %}

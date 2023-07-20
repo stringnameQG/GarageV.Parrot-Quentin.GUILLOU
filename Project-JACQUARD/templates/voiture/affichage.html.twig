@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détail {{ voiture.name }}{% endblock %}
+
+{% block body %}
+<h1>Détail de {{ voiture.name }}</h1>
+<p>Prix: {{ voiture.prix }}</p>
+<p>kilometrage: {{ voiture.kilometrage }}</p>
+<p>Mise en circulation: {{ voiture.miseencirculation }}</p>
+<p>Boite de vitesse: {{ voiture.boitedevitesse }}</p>
+<p>Carburant: {{ voiture.carburant }}</p>
+<p>Couleur: {{ voiture.couleur }}</p>
+<p>Marque: {{ voiture.marque }}</p>
+<p>Modele: {{ voiture.model }}</p>
+<p>Nombre de porte: {{ voiture.nombredeporte }}</p>
+<p>Puissance din: {{ voiture.puissancedin }}</p>
+<p>Puissance fiscal: {{ voiture.puissancefiscal }}</p>
+<p>Autre infos: {{ voiture.autresinfos }}</p>
+
+{% endblock %}

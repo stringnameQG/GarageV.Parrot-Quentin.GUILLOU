@@ -1,0 +1,9 @@
+{{ form_start(formulaireform)}}
+    {{ form_row(formulaireform.sujet) }}
+    {{ form_row(formulaireform.name) }}
+    {{ form_row(formulaireform.first_name) }}
+    {{ form_row(formulaireform.e_mail) }}
+    {{ form_row(formulaireform.numero) }}
+    {{ form_row(formulaireform.message) }}
+    <button type="submit">{{ button_label|default('Ajouter') }}</button>
+{{ form_end(formulaireform)}}

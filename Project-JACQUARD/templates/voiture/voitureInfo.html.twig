@@ -1,0 +1,92 @@
+{% extends 'corps.html.twig' %}
+
+{% block title %}Hello InfoVehiculeController!{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('asset/css/infos-véhicules-styles.css') }}">
+{% endblock %}
+
+{% block main %}
+<div class="voitures-description-photo">
+    <div class="voitures-arrow">
+        <img class="voitures-arrow-left" src="{{ asset('asset/Dossier-image/Body-image/arrow-left-circle-fill.svg') }}">
+        <img class="voitures-arrow-right" src="{{ asset('asset/Dossier-image/Body-image/arrow-left-circle-fill.svg') }}">
+    </div>
+    <div class="image-actuelle-compteur">
+        <span class="image-actuelle-affichage"><span class="image-actuelle">1</span>/<span class="image-nombre-total">2</span></span>
+    </div>
+</div>
+<div class="voiture">
+    <span class="voiture-titre">titre de la voiture{{ voiture.name }}</span>
+    <div class="voiture-infos">
+        <span>Prix: </span>
+        <span class="prix">20 000{{ voiture.prix }}</span>
+        <span> €</span>
+    </div>
+    <div class="voiture-infos">
+        <span>killometre: </span>
+        <span class="killometre">100 000{{ voiture.kilometrage }}</span>
+        <span>km</span>
+    </div>
+    <div class="voiture-infos-circulation">
+        <span>mise en circulation: </span>
+        <span class="annee">2004{{ voiture.miseencirculation }}</span>
+    </div>
+</div>
+<div class="informations-suplementaires">
+    <h4 class="informations-suplementaires-text">Informations suplémentaires</h4>
+    <div class="informations-suplementaires-row"> 
+        <div class="informations-suplementaires-column"> 
+            <p>Marque</p>
+            <p class="marque">RENAULT{{ voiture.marque }}</p>
+        </div>
+        <div class="informations-suplementaires-column"> 
+            <p>Modéle</p>
+            <p class="modele">Clio{{ voiture.modele }}</p>
+        </div>
+    </div>
+    <div class="informations-suplementaires-row"> 
+        <div  class="informations-suplementaires-column">
+            <p>Carburant</p>
+            <p class="carburant">Essence{{ voiture.carburant }}</p>
+        </div>
+        <div class="informations-suplementaires-column">
+            <p>Boite de vitesse</p>
+            <p class="boite-de-vitesse">Manuelle{{ voiture.boitevitesse }}</p>
+        </div>
+    </div>
+    <div class="informations-suplementaires-row"> 
+        <div class="informations-suplementaires-column">
+            <p>Couleur</p>
+            <p class="couleur">Gris{{ voiture.couleur }}</p>
+        </div>
+        <div class="informations-suplementaires-column">
+            <p>nombre de porte</p>
+            <p class="nombre-de-porte">3{{ voiture.nombreporte }}</p>
+        </div>
+    </div>
+    <div class="informations-suplementaires-row"> 
+        <div class="informations-suplementaires-column">
+            <p>Puissance fiscale</p>
+            <p class="puissance-fiscale">5{{ voiture.puissancefiscale }}<span> Cv</span></p>
+        </div>
+        <div class="informations-suplementaires-column">
+            <p>Puissance DIN</p>
+            <p class="puissance-din">75{{ voiture.puissancedin }}<span> Ch</span></p>
+        </div>
+    </div>
+</div>
+<div class="autres-infos">
+    <h4 class="autres-infos-titre">Autre infos</h4>
+    <p class="autres-infos-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Proin fermentum sem at dolor sodales sollicitudin. 
+        Suspendisse venenatis elit sed felis sagittis blandit. 
+        Nulla at fermentum mi. Class aptent taciti sociosqu ad 
+        litora torquent per conubia nostra.{{ voiture.autreinfo }}
+    </p>
+</div>
+<div class="body-question">
+    <p class="body-question-text">des question ? <span class="formulaire-button">formulaire</span></p>
+</div>
+{% endblock %}

@@ -1,0 +1,84 @@
+main {
+    background-color: white;
+    height: fit-content;
+    min-height: 550px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    z-index: 0;
+}
+.block-reparation, .block-peinture {
+    height: 200px;
+}
+.reparation {
+    width: fit-content;
+    padding: 8px;
+    text-align: center;
+    align-self: center;
+}
+.carrosserie-titre, .peinture-titre {
+    font-size: 20px;
+    text-align: center;
+}
+.carrosserie-text, .peinture-text {
+    font-size: 18px;
+}
+.peinture {
+    text-align: center;
+}
+.peinture-image, .reparation-image {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+}
+
+
+@media screen and (min-width: 800px) {
+
+}
+@media screen and (min-width: 1000px) {
+    main {
+        min-height: 700px;
+        height: fit-content;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+    .block-reparation, .block-peinture {
+        width: 90vw;
+        max-width: 1000px;
+        padding: 8px;
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10vw;
+    }
+    .reparation-image, .peinture-image {
+        width: 20vw;
+        max-width: 300px;
+        height: 20vw;
+        max-height: 300px;
+        visibility: visible;
+        align-self: center;
+    }
+    .reparation {
+        background-color: #D9D9D9;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .peinture-titre, .peinture-text {
+        margin: 10px;
+    }
+    .peinture {
+        background-color: #D9D9D9;
+        max-height: 140px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,18 @@
+<form class="connexion" action="{{ path('app_login') }}" method="post">
+<img class="button-quitte-aside" src="{{ asset('asset/Dossier-Image/Body-image/x-circle.svg') }}">
+<div class="email">
+    <div class="email-label">
+        <label for="email">e-mail</label>
+    </div>
+    <input type="text" id="email" name="_username" value="">
+</div>
+
+<div class="password">
+    <div class="password-label">
+        <label for="password">Mot de passe</label>
+    </div>
+    <input type="password" id="password" name="_password" >
+</div>
+<input type="hidden" name="_target_path" value="{{ path('Accueil') }}"> 
+<button class="submit" type="submit">ENVOYER</button>
+</form>

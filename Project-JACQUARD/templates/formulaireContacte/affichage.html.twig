@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détail de formulaire {{ formulaire.name }}{% endblock %}
+
+{% block body %}
+<h1>Détail de {{ formulaire.sujet }}</h1>
+<p>Prénom: {{ formulaire.first_name }}</p>
+<p>Nom: {{ formulaire.name }}</p>
+<p>Message: {{ formulaire.message }}</p>
+<p>Numéro: {{ formulaire.numero }}</p>
+<p>Email: {{ formulaire.e_mail }}</p>
+
+
+{% endblock %}

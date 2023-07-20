@@ -1,0 +1,283 @@
+
+main {
+    background-color: #EDEDE9;
+    min-height: 514px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+}
+.les-services, .nos-vehicule, .avis-clients {
+    background-color: #E9C46A;
+    padding: 8px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+.les-services, .avis-clients {
+    max-width: 500px;
+}
+.les-services {
+    min-width: 258px;
+}
+.nos-vehicule {
+    width: (100vw - 16px);
+}
+.nos-vehicule > h1 {
+    width: 200px;
+    align-self: center;
+}
+.nos-vehicule-text {
+    width: calc(100% - 10px);
+    align-self: center;
+}
+.nos-vehicule-text > p {
+    width: calc(100% - 10px);
+    align-self: center;
+}
+.nos-vehicule-cars {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.voiture-titre {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.voiture-image {
+    height: 50vw;
+    width: 80vw;
+    margin: 10px;
+    align-self: center;
+}
+.voiture {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.voiture-infos {
+    min-width: 200px;
+    min-width: 45%;
+    width: fit-content; 
+    padding: 4px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.voiture-infos > span {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.les-services > h1, .nos-vehicule > h1, .avis-clients > h1 {
+    margin: 4px;
+}
+.les-services > ul {
+    text-align: center;
+    padding-left: 0px;
+    align-self: center;
+}
+.les-services > ul > li {
+    text-align: start;
+}
+.avis-clients {
+    gap: 8px;
+}
+#commentaire_commentaire {
+    width: 95%;
+    height: 48px;
+    align-self: center;
+}
+.commentaire-formulaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 6px;
+}
+#name {
+    width: 200px;
+}
+.required {
+    display: none;
+    
+}
+
+#commentaire {
+    width: calc(100% - (8px));
+    height: 120px;
+    resize: none;
+}
+#commentaire_commentaire {
+    width: 80%;
+    height: 60px;
+    resize: none;
+}
+.commentaire-submit {
+    width: 90px;
+    padding: 4px;
+    align-self: center;
+}
+.note {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+#note {
+    width: 50%;
+    justify-items: center;
+}
+.note > div {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.note-text {
+    margin: 4px;
+}
+.note-numero {
+    margin: 0px;
+    margin-left: 2px; margin-right: 2px;
+}
+.client {
+    min-width: calc(100% - (16px));
+    max-width: 700px;
+    align-self: center;
+    background-color: #F4A261;
+    border-radius: 15px;
+    padding: 8px;
+}
+.client-name {
+    font-weight: bold;
+}
+.client-comment {
+    margin: 4px;
+}
+.client-note-affichage {
+    padding: 5px;
+    margin: 0px;
+    text-align: center;
+}
+.client-note {
+    text-align: center;
+}
+.plus-de-commentaire {
+    background-color: rgb(232, 89, 89);
+    padding: 2px;
+    align-self: center;
+    border-radius: 10px;
+}
+
+
+@media screen and (min-width: 800px) {
+    .voiture-infos {
+        width: 30%; 
+        padding: 4px;
+        margin: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    main {
+        min-height: calc(100vh - (80px + 190px));
+        height: fit-content;
+        padding: 0px;
+        display: grid;
+        grid-template-columns: 3fr 450px 4fr 450px 3fr;
+        grid-template-rows: 20px 180px 20px 300px 1fr 20px ;
+        gap: 0px;
+        align-items: center;
+    }
+    .les-services, .nos-vehicule, .avis-clients {
+        width: 100% - 8px;
+        max-width: 442px;
+    }
+    .les-services {
+        min-height: 115px;
+        height: 170px;
+        max-height: 170px;
+        padding: 4px;
+        border-radius: 15px;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+    }
+    .nos-vehicule {
+        height: fit-content;
+        padding: 4px;
+        justify-content: flex-start;
+        gap: 8px;
+        grid-row-start: 2;
+        grid-row-end: 5;
+        grid-column-start: 4;
+    }
+    .nos-vehicule-text {
+        background-color: #F4A261;
+        border: 6px;
+        border-radius: 15px;
+    }
+    .nos-vehicule-text > p {
+        height: min-content;
+        margin: 8px;
+    }
+    .nos-vehicule-cars {
+        background-color: #F4A261;
+        height: min-content;
+        width: calc(100% - 20px);
+        padding: 5px;
+        margin: 2px;
+        border-radius: 15px;
+        align-self: center;
+        justify-content: center;
+    }
+    .voiture-image {
+        height: 250px;
+        width: 95%;
+        margin: 0px;
+        margin-top: 4px; margin-bottom: 4px;
+        align-self: center;
+    }
+    .voiture {
+        height: min-content;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .voiture-infos {
+        width: 48%; 
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    .avis-clients {
+        min-height: 30vh;
+        padding: 4px;
+        height: fit-content;
+        grid-row-start: 4;
+        grid-row-end: 6;
+        grid-column-start: 2;
+    }
+    .client {
+        background-color: #F4A261;
+        max-width: 700px;
+        margin-left: 8px; margin-right: 8px;
+        padding: 4px;
+        border-radius: 15px;
+        align-self: center;
+    }
+}

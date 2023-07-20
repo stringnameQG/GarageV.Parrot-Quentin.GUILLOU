@@ -1,0 +1,346 @@
+@font-face { 
+    font-family: Gobold; 
+    src: url("../Police/GoboldRegular.otf");
+} 
+@font-face { 
+    font-family: LiberationSans-Regular; 
+    src: url("../Police/LiberationSans-Regular.ttf") ; 
+} 
+@font-face { 
+    font-family: kenyan coffee; 
+    src: url("../Police/KenyanCoffeeRg.otf") ; 
+}
+body {
+    background-color: #EDEDE9;
+    margin: 0px;
+    font-family: LiberationSans-Regular;
+    letter-spacing: 1px;
+    z-index: 0;
+}
+header {
+    background-color: #E9C46A;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header-icon-register, .header-icon-nav, .logo {
+    align-self: center;
+}
+.header-icon-register, .header-icon-nav {
+    height: 30px;
+    width: 30px;
+    margin-left: 20px; margin-right: 20px;
+}
+.logo {
+    background-color: #ffffff;
+    height: 50px;
+    width: 150px;
+}
+nav {
+    background-color: #CDCDCD;
+    min-width: 150px;
+    width: fit-content;
+    height: fit-content;
+    padding: 2px;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    visibility: hidden;
+    z-index: -1;
+}
+.button-quitte, .button-quitte-nav, .button-quitte-formulaire-contacte, .button-quitte-aside {
+    height: 30px;
+    width: 30px;
+    align-self: end;
+}
+.formulaire {
+    
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.formulaire > li {
+    align-self: center;
+}
+.nav-link {
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+}
+.formulaire-de-contacte {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    visibility: hidden;
+}
+aside {
+    background-color: #c5c5c5bb;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    visibility: hidden;
+}
+.connexion {
+    background-color: #A7A7A7;
+    height: 250px;
+    width: 330px;
+    position: relative;
+    top: calc(50% - (250px / 2)); 
+    left: calc(50% - (330px / 2));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.email, .password, .submit {
+    align-self: center;
+}
+.email, .password, .sujet, .nom, .prenom, .email, .phone, .message {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.formulaire-de-contacte {
+    background-color: #c5c5c5bb;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    visibility: hidden;
+}
+.formulaire-contenue {
+    background-color: #C1C1C1;
+    height: 580px;
+    width: 330px;
+    position: relative;
+    top: calc(50% - (580px / 2)); 
+    left: calc(50% - (330px / 2));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.formulaire-contenue > form {
+    padding: 10px;
+    height: calc(580px - 30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.formulaire-contenue > form > button {
+    width: 80px;
+    align-self: center;
+}
+.formulaire-contenue > form > div > label {
+    display: flex;
+}
+.formulaire-contenue > form > div > input {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#formulaire_contacte_message {
+    resize: none;
+    height: 60px;
+    width: 90%;
+
+}
+.email-label, .password-label {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.email-label > , .password-label {
+    width: 100%;
+    display: flex;
+    flex-direction: flex;
+    justify-content: space-between;
+}
+.champ-requis {
+    margin: 2px;
+}
+.submit {
+    height: 30px;
+    width: 110px;
+    margin: 8px;
+    letter-spacing: 2px;
+}
+
+.contacte {
+    background-color: #C1C1C1;
+    height: 580px;
+    width: 330px;
+    position: relative;
+    top: calc(50% - (580px / 2)); 
+    left: calc(50% - (330px / 2));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sujet, .nom, .prenom, .email, .phone, .message {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+.message > label {
+    background-color: #A7A7A7;
+    text-align: center;
+}
+#message {
+    height: 140px;
+    resize: none;
+}
+.champ-requis {
+    text-align: center;
+}
+footer {
+    background-color: #E76F51;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: kenyan coffee;
+}
+.nous-joindre > h2, .nos-horaires > h2, .nos-medias > h2 {
+    margin: 6px;
+}
+.nous-joindre {
+    align-self: center;
+}
+.nous-joindre > p {
+    text-align: center;
+    margin: 2px;
+}
+.formulaire-contacte-button {
+    color: #7C0000;
+}
+.nos-horaires {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+}
+.nos-horaires > ul > li {
+    letter-spacing: 3px;
+}
+.nos-medias {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: center;
+}
+.footer-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 46px;
+}
+.footer-icon > a > img {
+    height: 28px;
+    width: 28px;
+}
+a, h1, h2, ul {
+    text-align: center;
+}
+h1 {
+    font-size: 20px;
+}
+h2 {
+    font-family: Gobold;
+    font-size: 22px;
+    font-weight: 200;
+    letter-spacing: 4px;
+    align-self: center;
+}
+ul {
+    padding-left: 0px;
+    margin: 0px;
+}
+li {
+    font-size: 18px;
+}
+p, span, a {
+    font-size: 16px;
+    font-weight: 200;
+}
+hr {
+    border-left: 0px; border-right: 0px;
+    margin-top: 6px; margin-bottom: 6px;
+}
+
+@media screen and (min-width: 800px) {
+    header {
+        height: 80px;
+    }
+    .header-icon-register, .header-icon-nav {
+        height: 40px;
+        width: 40px;
+    }
+    .logo {
+        height: 70px;
+        width: 200px;
+    }
+    footer {
+        height: fit-content;
+    }
+	a, h1, h2, ul {
+        text-align: center;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-family: Gobold;
+        font-size: 22px;
+    }
+    li {
+        font-size: 18px;
+    }
+    p, span, a {
+        font-size: 16px;
+    }
+    hr {
+        margin-top: 12px; margin-bottom: 10px;
+    }
+}
+@media screen and (min-width: 1000px) {
+	header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 90px;
+    }
+    .header-icon-register, .header-icon-nav {
+        height: 40px;
+        width: 40px;
+        margin-left: 0px; margin-right: 0px;
+    }
+    .logo {
+        height: 70px;
+        width: 200px;
+    }
+    footer {
+        height: fit-content;
+        padding-bottom: 16px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 120px;
+    }
+}

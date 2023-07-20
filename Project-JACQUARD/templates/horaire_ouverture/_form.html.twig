@@ -1,0 +1,10 @@
+{{ form_start(horaireform)}}
+    {{ form_row(horaireform.lundi) }}
+    {{ form_row(horaireform.mardi) }}
+    {{ form_row(horaireform.mercredi) }}
+    {{ form_row(horaireform.jeudi) }}
+    {{ form_row(horaireform.vendredi) }}
+    {{ form_row(horaireform.samedi) }}
+    {{ form_row(horaireform.dimanche) }}
+    <button type="submit">{{ button_label|default('Ajouter') }}</button>
+{{ form_end(horaireform)}}

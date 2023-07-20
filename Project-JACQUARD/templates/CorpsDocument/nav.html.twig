@@ -1,0 +1,18 @@
+        <img class="button-quitte-nav" src="{{ asset('asset/Dossier-Image/Body-image/x-circle.svg') }}">
+        <ul class="formulaire">
+            <li><a class="nav-link" href="{{ path('Accueil') }}">Accueil</a></li>
+            <li><a class="nav-link" href="{{ path('Voiture') }}">Voiture</a></li>
+            <li><a class="nav-link" href="{{ path('Entretien') }}">Entretien</a></li>
+            <li><a class="nav-link" href="{{ path('Carrosserie') }}">Carrosserie</a></li>
+            <li><a class="nav-link" href="{{ path('Réparation') }}">Réparation</a></li>
+            {% if is_granted("ROLE_ADMIN") %}
+            <li><a class="nav-link" href="{{ path('app_admin_index') }}">User-admin</a></li> 
+            {% elseif is_granted("ROLE_USER") %}
+            <li><a class="nav-link" href="{{ path('app_user_index') }}">User-user</a></li> 
+            {% endif %}
+            <li>
+                <a href="{{ path('app_logout') }}" onclick="return confirm('Etes vous sur de vouloir vous déconnecter ?');">
+                    Logout
+                </a>
+            </li>
+        </ul>

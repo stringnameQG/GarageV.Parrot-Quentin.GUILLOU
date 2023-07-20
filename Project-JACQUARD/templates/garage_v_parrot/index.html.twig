@@ -1,0 +1,85 @@
+{% extends 'corps.html.twig' %}
+
+{% block title %}GarageVParrot/Accueil{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('asset/css/Accueil-styles.css') }}">
+{% endblock %}
+
+{% block body %}
+
+
+{% endblock %}
+
+{% block main %}
+
+
+<div class="les-services">
+    <h1>Nos services proposés</h1>
+    <ul>
+        <li>Réparation de carrosserie</li>
+        <li>Réparation mécanique</li>
+        <li>Vente de véhicules</li>
+        {% for service in services %}
+        <li>{{ service.contenue }}</li>
+        {% else %}
+        <li>no records found</li>
+        {% endfor %}  
+        
+    </ul>
+</div>
+<div class="avis-clients">
+    <h1>Avis clients</h1>
+{{ include('commentaire/_form.html.twig') }} 
+{% for commentaire in commentaires %}
+    
+        <div class="client">
+            <span class="client-name">{{ commentaire.name }}</span>
+            <p class="client-comment">{{ commentaire.commentaire }}</p>
+            <p class="client-note-affichage"><span class="client-note">{{ commentaire.note }}</span>/5</p>
+        </div>
+    
+{% else %}
+        <span>no records found</span>
+{% endfor %}
+    <span class="plus-de-commentaire">Plus de commentaires</span>
+</div>
+<div class="nos-vehicule">
+    <h1>Nos véhicules</h1>
+    <div class="nos-vehicule-text">
+        <p>Notre garage à pour spécialités la réparation et remise en 
+            état de véhicule d’occasion
+        </p>
+    </div>
+        {% for voiture in voitures %}
+        {% if loop.index <= 1%}
+    <div class="nos-vehicule">
+        <div class="nos-vehicule-cars">
+            <img class="voiture-image" src="voiture">
+            <span class="voiture-titre">{{ voiture.name }}</span>
+            <div class="voiture">
+                <div class="voiture-infos">
+                    <span>Prix: </span>
+                    <span class="prix">{{ voiture.prix }}<span>€</span></span>
+                </div>
+                <div class="voiture-infos">
+                    <span>killometre: </span>
+                    <span class="killometre">{{ voiture.kilometrage }}<span>km</span></span>
+                </div>
+                <div class="voiture-infos">
+                    <span>mise en circulation: </span>
+                    <span class="annee">{{ voiture.miseencirculation }}</span>
+                </div> 
+            </div>
+        </div>
+    </div>
+        {% endif %}
+    {% else %}
+    <span>No records</span>
+    {% endfor %}
+</div>
+{% block script %}
+    <script src="{{ asset('asset/js/PlusDeCommentaire.js') }}"></script>
+{% endblock %}
+
+{% endblock %}

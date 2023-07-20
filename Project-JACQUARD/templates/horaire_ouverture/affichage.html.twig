@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détail de {{ commentaire.name }}{% endblock %}
+
+{% block body %}
+<h1>Détail de {{ commentaire.name }}</h1>
+<p>Commentaire: {{ commentaire.commentaire }}</p>
+<p>Note: {{ commentaire.note }}</p>
+
+
+{% endblock %}
